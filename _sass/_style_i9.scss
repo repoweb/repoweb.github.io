@@ -99,3 +99,25 @@ pre code a{
 .tp-post{
     display: inline;
 }
+
+.navbar-item-tran-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1023px)
+{
+.navbar-item-tran {
+    display: none;
+}
+}
+
+@media screen and (max-width: 1023px)
+{
+.navbar-item-tran-mobile {
+    display: block;
+}
+.navbar-item-tran-mobile img{
+    width: 30px;
+    margin-right: 6px;
+}
+}
