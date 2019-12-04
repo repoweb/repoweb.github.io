@@ -1,0 +1,36 @@
+- t:
+  name:
+    en: Packages
+    pt-BR: Pacotes
+  link:
+    en: /list/
+    pt-BR: /pt-BR/list/
+- t:
+  name:
+    en: Blog
+    pt-BR: Blog
+  link:
+    en: /blog/
+    pt-BR: /pt-BR/blog/
+- t:
+  name:
+    en: About
+    pt-BR: Sobre
+  link:
+    en: /about/
+    pt-BR: /pt-BR/about/
+- t:
+  name:
+    en: Search
+    pt-BR: Pesquisar
+  link:
+    en: /search/
+    pt-BR: /pt-BR/search/
+- t:
+  name:
+    en: GitHub
+    pt-BR: GitHub
+  link:
+    en: //github.com/repoweb
+    pt-BR: //github.com/repoweb
+  target: _blank

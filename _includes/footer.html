@@ -1,0 +1,23 @@
+<footer class="footer i9web_footer-m">
+    <div class="container">
+        {% if site.footer_menu %}
+        <div class="columns is-multiline">
+            {% for item in site.data[site.footer_menu] %}
+            <div class="column has-text-centered">
+                <div>
+                    <a href="{{ item.link | prepend: site.baseurl }}" class="link">{{ item.name }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <div class="content is-small has-text-centered">
+          ©
+          <script type="text/javascript">
+          var year = new Date();
+          document.write(year.getFullYear());
+        </script>
+        <a href="{{ site.baseurl }}/" class="link">Marcelo Sena</a>
+        </div>
+    </div>
+</footer>

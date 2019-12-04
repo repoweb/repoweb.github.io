@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div id="blog" class="content" data-ref="{{page.link_ref}}">
+
+    <p>{{ site.data.translations['published'][page.lang] }}: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
+
+    <div class="i9web_blog-post i9web_blog-post-mp">
+      <h1 class="i9web_blog-post_title">
+          {{ page.title }}
+      </h1>
+      {{ content }}
+      {% include post_footer.html %}
+      {% if page.comments %}
+        {% include disqus.html %}
+      {% endif %}
+    </div>
+
+</div>
+
+<div class="tags">
+    {% for tag in page.tags %}
+    <span class="tag is-primary">{{ tag }}</span>
+    {% endfor %}
+</div>

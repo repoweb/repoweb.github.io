@@ -1,0 +1,45 @@
+style: is-light
+items:
+  - title:
+      en: Packages and Projects
+      pt-BR: Pacotes e Projetos
+    subtitle:
+      en: List of all packages or solutions
+      pt-BR: Lista de todos os pacotes ou soluções
+    icon: fa-clipboard-list
+    link: list
+    call_to_action_name:
+      en: Learn More
+      pt-BR: Leia Mais
+    call_to_action_link:
+      en: /list
+      pt-BR: /pt-BR/list
+  - title:
+      en: Blog Marcelo Sena
+      pt-BR: Blog Marcelo Sena
+    subtitle:
+      en: See what was recently released
+      pt-BR: Veja todas as postagens do blog
+    icon: fab fa-blogger
+    link: blog
+    call_to_action_name:
+      en: Learn More
+      pt-BR: Leia Mais
+    call_to_action_link:
+      en: /blog
+      pt-BR: /pt-BR/blog
+  - title:
+      en: GitHub RepoWeb
+      pt-BR: GitHub RepoWeb
+    subtitle:
+      en: My repositories for more details
+      pt-BR: Meus repositórios para mais detalhes
+    icon: fab fa-github
+    link: https://github.com/repoweb
+    external_link: true
+    call_to_action_name:
+      en: Learn More
+      pt-BR: Leia Mais
+    call_to_action_link:
+      en: https://github.com/repoweb
+      pt-BR: https://github.com/repoweb

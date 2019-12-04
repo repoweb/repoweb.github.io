@@ -1,0 +1,36 @@
+relatedPosts:
+  en: Related Posts
+  pt-BR: Artigos Relacionados
+differentLanguage:
+  en: Read this page in a different language
+  pt-BR: Leia esta página em outro idioma
+published:
+  en: Published
+  pt-BR: Publicado
+readMore:
+  en: Read more
+  pt-BR: Leia Mais
+latestPost:
+  en: Latest Post
+  pt-BR: Postagem Mais Recente
+latestPosts:
+  en: Latest Posts
+  pt-BR: Últimas Postagens
+repositoriesRepoWeb:
+  en: Repositories RepoWeb
+  pt-BR: Repositórios RepoWeb
+findMoreUpdates:
+  en: You can find more updates on
+  pt-BR: Você pode encontrar mais atualizações sobre em
+repoWebRepositories:
+  en: RepoWeb - Repositories
+  pt-BR: RepoWeb - Repositórios
+contactMe:
+  en: Contact me
+  pt-BR: Contate-me
+searchTerm:
+  en: Search term
+  pt-BR: Porquisar por
+searchTermPlaceholder:
+  en: e.g. Code of
+  pt-BR: ex. Código de

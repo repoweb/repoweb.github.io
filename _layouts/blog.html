@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<ul class="columns is-multiline">
+{% for item in site.posts %}
+{% unless item.lang != page.lang %}
+<li id="blog" class="column is-12" data-ref="{{page.link_ref}}">
+  <div class="card">
+      {% if item.image %}
+      <div class="card-image">
+          <img src="{{ item.image }}" alt="{{ item.title }}">
+      </div>
+      {% else %}
+      <header class="card-header">
+          <a class="card-header-title" href="{{ site.baseurl }}{{ item.url }}">{{ item.title}}</a>
+      </header>
+      {% endif %}
+      <div class="card-content">
+          <div class="content">
+              {% if item.image %}
+              <a class="title is-4" href="{{ site.baseurl }}{{ item.url }}">{{ item.title}}</a>
+              {% endif %}
+              <p style="margin-top:15px;">{{ item.description }}</p>
+          </div>
+          <div class="has-text-centered">
+              <a href="{{ site.baseurl }}{{ item.url }}" class="button is-primary">{{ site.data.translations['readMore'][page.lang] }}</a>
+          </div>
+      </div>
+      <footer class="card-footer">
+          <p class="card-footer-item">{{ site.data.translations['published'][page.lang] }}: {{ item.date | date: "%b %-d, %Y" }}</p>
+      </footer>
+  </div>
+</li>
+{% endunless %}
+{% endfor %}
+</ul>
+
+<script type="text/javascript" src="/assets/js/paginathing.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    $('ul').paginathing({
+      perPage: 5,
+      limitPagination: false,
+      prevNext: true,
+      firstLast: false,
+      prevText: 'Previous',
+      nextText: 'Next',
+      containerClass: 'pagination-container',
+      ulClass: 'pagination',
+      liClass: 'page',
+      activeClass: 'is-current',
+      disabledClass: 'disabled',
+    })
+  });
+</script>

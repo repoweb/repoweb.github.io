@@ -1,0 +1,11 @@
+.bundle
+.sass-cache
+.jekyll-metadata
+*.gem
+_site
+Gemfile.lock
+.idea
+.DS_Store
+_material
+_notepad
+teste.md

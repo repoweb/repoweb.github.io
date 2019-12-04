@@ -1,0 +1,25 @@
+{% assign related = site.posts | where:"lang", page.lang %}
+<p class="title is-4">
+  {% if page.latest_posts %}
+  {{ site.data.translations['latestPost'][page.lang] }}
+  {% else %}
+  {{ site.data.translations['latestPosts'][page.lang] }}
+  {% endif %}
+</p>
+<div class="columns is-multiline">
+  {% if related.size > 0 %}
+  {% if page.latest_posts %}
+  {% for post in related limit: 1 %}
+  <div class="column is-12">
+      {% include post-card.html %}
+  </div>
+  {% endfor %}
+  {% else %}
+  {% for post in related limit: 3 %}
+  <div class="column is-12">
+      {% include post-card.html %}
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% endif %}
+</div>

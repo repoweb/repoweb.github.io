@@ -1,0 +1,61 @@
+# Site Settings
+title: RepoWeb
+tagline: Marcelo Sena
+email: contato@marcelosena.com
+description: >
+  Public repository, packages and projects RepoWeb
+baseurl: ""
+url: "https://repoweb.github.io/"
+permalink: pretty
+favicon: /favicon.ico
+theme: bulma-clean-theme
+
+author:
+  name: Marcelo Sena
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - kramdown
+  - rouge
+
+exclude:
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - _material
+
+livereload: true
+
+sass:
+  style: compressed
+  source_dir: _sass
+
+google_analytics: UA-145893192-2
+
+markdown: kramdown
+highlighter: rouge
+
+footer_menu: footer_menu
+
+defaults:
+  #languages
+  -
+    scope:
+      path: ""
+    values:
+      lang: "en"
+      layout: default
+      show_sidebar: true
+  -
+    scope:
+      path: "pt-BR"
+    values:
+      lang: "pt-BR"
+      show_sidebar: true

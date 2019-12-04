@@ -1,0 +1,37 @@
+{% if page.callouts %}
+    {% assign callouts=site.data.[page.callouts] %}
+    <section class="i9web_callout hero {% if callouts.height %} {{ callouts.height }} {% else %} is-medium {% endif %} {{ callouts.style }}">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-multiline is-centered">
+                    {% for callout in callouts.items %}
+
+                        <div class="column is-4 has-text-centered">
+                            <a class="i9web_callout-c" href="{{ callout.call_to_action_link[page.lang] }}" target="{% if callout.external_link == true %}_blank{% else %}_self{% endif %}">
+                            {% if callout.icon %}
+                            <div class="icon is-large">
+                                <i class="fas {{ callout.icon }} fa-4x"></i>
+                            </div>
+                            {% endif %}
+                            <p class="title is-5">{{ callout.title[page.lang] }}</p>
+                            <p class="subtitle is-5">{{ callout.subtitle[page.lang] }}</p>
+
+                            {% if callout.description %}
+                            <div class="content">
+                                <p>{{ callout.description | newline_to_br }}</p>
+                            </div>
+                            {% endif %}
+
+                            {% if callout.call_to_action_name %}
+                            <a href="{{ callout.call_to_action_link[page.lang] | prepend: site.baseurl }}" class="button is-primary" target="{% if callout.external_link == true %}_blank{% else %}_self{% endif %}">
+                                {{ callout.call_to_action_name[page.lang] }}
+                            </a>
+                            {% endif %}
+                        </a></div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}

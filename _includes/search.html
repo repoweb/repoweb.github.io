@@ -1,0 +1,42 @@
+<form id="search-form" action="">
+    <label class="label" for="search" style="color:#00707D;font-size:1.5rem;">
+        {{site.data.translations['searchTerm'].[page.lang]}}:
+    </label>
+    <input class="input" id="search" type="text" name="search" placeholder="{{site.data.translations['searchTermPlaceholder'].[page.lang]}}" autocomplete="off">
+    <ul class="list list--results" id="list"></ul>
+</form>
+
+<script type="text/javascript" src="{{ site.baseurl }}/assets/fetch.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/search.js"></script>
+<script type="text/javascript">
+    const search = new jekyllSearch(
+        '/assets/search.json',
+        '#search',
+        '#list',
+        'https://repoweb.github.io/'
+    );
+    search.init();
+</script>
+<style>
+    .result__article a{
+        color:#00707D;
+    }
+    .content ul {
+        list-style: decimal-leading-zero;
+        background-color: transparent;
+        align-items: stretch;
+        box-shadow: 0 1px 2px rgba(10,10,10,0.1);
+    }
+    .content li {
+    margin-bottom: 10px;
+        border: 1px solid #dbdbdb;
+        padding: 10px
+    }
+    .result {
+        background-color: transparent;
+        align-items: stretch;
+    }
+    .result__article h4{
+        margin-bottom:5px;
+    }
+</style>

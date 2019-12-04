@@ -1,0 +1,49 @@
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="{{ site.baseurl }}/" class="navbar-item">
+                {{ site.title }}
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="{% if page.lang == 'en' %}{{ site.baseurl }}/{% else %}{{ site.baseurl }}/{{ page.lang }}{% endif %}" class="navbar-item {% if page.url == '/' or page.url == '/pt-BR/' %}is-active{% endif %}">Home</a>
+                {% if site.data.navigation %}
+                {% for item in site.data.navigation %}
+                     <a id="menu_{{ item.name.[page.lang] }}" href="{{ item.link.[page.lang] }}" class="navbar-item {% if item.link.[page.lang] == page.url %}is-active{% endif %}"{% if item.target %} target="{{ item.target }}"{% endif %}>{{ item.name.[page.lang] }}</a>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="navbar-item-tran navbar-item has-dropdown is-hoverable">
+          {% if page.layout == 'page' or page.layout == 'blog' %}
+          <a href="javascript:void(0);" class="navbar-link"><img src="{{ site.baseurl }}/img/{{page.lang}}.jpeg" alt="">{{site.data.locales[page.lang].title}}</a>
+          {% for langs in site.pages %}
+          {% if langs.link_ref == page.link_ref and langs.lang != page.lang %}
+          <div class="navbar-dropdown">
+              {% if langs.lang == 'en' %}
+              <a href="{{ page.url | remove: '/pt-BR' }}" class="navbar-item"><img src="{{ site.baseurl_root }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
+              {% else %}
+              <a href="/{{langs.lang}}{{ page.url }}" class="navbar-item"><img src="{{ site.baseurl_root }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
+              {% endif %}
+          </div>
+          {% endif %}
+          {% endfor %}
+          {% else %}
+          <a href="javascript:void(0);" class="navbar-link"><img src="{{ site.baseurl }}/img/{{page.lang}}.jpeg" alt="">{{site.data.locales[page.lang].title}}</a>
+          {% for langs in site.posts %}
+          {% if langs.link_ref == page.link_ref and langs.lang != page.lang %}
+          <div class="navbar-dropdown">
+            <a href="{{ langs.url }}" class="navbar-item"><img src="{{ site.baseurl_root }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
+          </div>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+        </div>
+    </div>
+</nav>
