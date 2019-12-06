@@ -9,7 +9,7 @@ link_ref: about
 # About me
 
 Hi, my name is Marcelo Sena,<br>
-I am a web developer, Brazilian and I live in the interior of the state of S達o Paulo.<br>
+I am a web developer, Brazilian and I live in the interior of the state of São Paulo.<br>
 I am currently working freelancer.
 
 ## Skills

@@ -26,9 +26,9 @@
                 {% for langs in site.pages %}
                 {% if langs.link_ref == page.link_ref and langs.lang != page.lang %}
                     {% if langs.lang == 'en' %}
-                    <a href="{{ page.url | remove: '/pt-BR' }}" class="navbar-item"><img src="{{ site.baseurl_root }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
+                    <a href="{{ page.url | remove: '/pt-BR' }}" class="navbar-item"><img src="{{ site.relative_url }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
                     {% else %}
-                    <a href="/{{langs.lang}}{{ page.url }}" class="navbar-item"><img src="{{ site.baseurl_root }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
+                    <a href="/{{langs.lang}}{{ page.url }}" class="navbar-item"><img src="{{ site.relative_url }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
                     {% endif %}
                 {% endif %}
                 {% endfor %}
@@ -36,7 +36,7 @@
                 <a href="javascript:void(0);" class="navbar-item"><img src="{{ site.baseurl }}/img/{{page.lang}}.jpeg" alt="">{{site.data.locales[page.lang].title}}</a>
                 {% for langs in site.posts %}
                 {% if langs.link_ref == page.link_ref and langs.lang != page.lang %}
-                <a href="{{ langs.url }}" class="navbar-item"><img src="{{ site.baseurl_root }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
+                <a href="{{ langs.url }}" class="navbar-item"><img src="{{ site.relative_url }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
                 {% endif %}
                 {% endfor %}
                 {% endif %}
@@ -49,9 +49,9 @@
               {% if langs.link_ref == page.link_ref and langs.lang != page.lang %}
               <div class="navbar-dropdown">
                   {% if langs.lang == 'en' %}
-                  <a href="{{ page.url | remove: '/pt-BR' }}" class="navbar-item"><img src="{{ site.baseurl_root }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
+                  <a href="{{ page.url | remove: '/pt-BR' }}" class="navbar-item"><img src="{{ site.relative_url }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
                   {% else %}
-                  <a href="/{{langs.lang}}{{ page.url }}" class="navbar-item"><img src="{{ site.baseurl_root }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
+                  <a href="/{{langs.lang}}{{ page.url }}" class="navbar-item"><img src="{{ site.relative_url }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
                   {% endif %}
               </div>
               {% endif %}
@@ -61,7 +61,7 @@
               {% for langs in site.posts %}
               {% if langs.link_ref == page.link_ref and langs.lang != page.lang %}
               <div class="navbar-dropdown">
-                <a href="{{ langs.url }}" class="navbar-item"><img src="{{ site.baseurl_root }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
+                <a href="{{ langs.url }}" class="navbar-item"><img src="{{ site.relative_url }}/img/{{langs.lang}}.jpeg" alt="{{site.data.locales[langs.lang].title}}">{{site.data.locales[langs.lang].title}}</a>
               </div>
               {% endif %}
               {% endfor %}

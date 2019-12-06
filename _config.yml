@@ -10,9 +10,6 @@ permalink: pretty
 favicon: /favicon.ico
 theme: bulma-clean-theme
 
-author:
-  name: Marcelo Sena
-
 plugins:
   - jekyll-sitemap
   - jekyll-feed
@@ -29,7 +26,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - _material
 
 livereload: true
 
