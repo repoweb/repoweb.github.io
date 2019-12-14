@@ -9,6 +9,8 @@ link_ref: packagesList
 
 ## Packages List
 
-* <a href="https://github.com/repoweb/routes-directory" target="{{ page.target }}">Routes Directory</a>
+{% for repo in site.data.repos %}
+* [{{ repo.name }}]({% if repo.has_pages %}{{repo.homepage}}{% else %}{{repo.html_url}}{% endif %}){:target="_blank"}
+{% endfor %}
 
 {% include post_footer.html %}

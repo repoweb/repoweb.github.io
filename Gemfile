@@ -10,4 +10,6 @@ group :jekyll_plugins do
     gem "jekyll-seo-tag"
     gem "kramdown", "~> 1.17"
     gem "rouge", "~> 3.3"
+    gem "jekyll-remote-include"
+    gem "jekyll-get-json"
 end

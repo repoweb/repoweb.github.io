@@ -10,7 +10,13 @@ permalink: pretty
 favicon: /favicon.ico
 theme: bulma-clean-theme
 
+jekyll_get_json:
+  - data: repos
+    json: 'https://api.github.com/users/repoweb/repos'
+
 plugins:
+  - jekyll-remote-include
+  - jekyll-get-json
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
