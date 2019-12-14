@@ -10,7 +10,7 @@ link_ref: packagesList
 ## Packages List
 
 {% for repo in site.data.repos %}
-* [{{ repo.name }}]({% if repo.has_pages %}{{repo.homepage}}{% else %}{{repo.html_url}}{% endif %}){:target="_blank"}
+* [{{ repo.name }}]({{repo.url}}){:target="_blank"}
 {% endfor %}
 
 {% include post_footer.html %}
